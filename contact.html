@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Index.html">
     <link rel="stylesheet" href="gallery.html">
     <link rel="stylesheet" href="about.html">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
      <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
     <title>Tech Guruji Contact Us</title>
     <style>
@@ -81,10 +82,9 @@
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             
-            .then(response => window.location.href ='thanks.html'
-        )  alert("Message Sent")
+swal("Hey!", "Your message was succesfully sent!", "success");
             .catch(error => {console.error('Error!', error.message)
-            alert("Sorry Unable to send your message") })
+            })
         })
       </script>
 </body>
