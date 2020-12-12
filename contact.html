@@ -81,9 +81,8 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            
-swal("Hey!", "Your message was succesfully sent!", "success");
-            .catch(error => {console.error('Error!', error.message)
+           .then(response => window.location.replace("thanks.html"); 
+
             })
         })
       </script>
